@@ -59,6 +59,18 @@ public class HeroTester {
         tearDown();
     }
 
+
+    @Test
+    public void TestToString() {
+        setUp();
+        String expected = "Hero{" +
+                "name='" + hero1.getName() + '\'' +
+                ", hitPoints=" + hero1.getHitPoints() +
+                '}';
+        assertEquals("Ensure that your toString method returns a String that is formatted like the document specifies!", expected, hero1.toString());
+        tearDown();
+    }
+
     @Test
     public void TestFightToTheDeathNTimes() {
         setUp();
@@ -76,17 +88,6 @@ public class HeroTester {
 
         assertEquals("Ensure that your nFightsToTheDeath method has been implemented correctly!", numberOfFights, winsHero1+winsHero2);
 
-        tearDown();
-    }
-
-    @Test
-    public void TestToString() {
-        setUp();
-        String expected = "Hero{" +
-                "name='" + hero1.getName() + '\'' +
-                ", hitPoints=" + hero1.getHitPoints() +
-                '}';
-        assertEquals("Ensure that your toString method returns a String that is formatted like the document specifies!", expected, hero1.toString());
         tearDown();
     }
 
